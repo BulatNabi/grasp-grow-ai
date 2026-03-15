@@ -11,33 +11,33 @@ import {
 const features = [
   {
     icon: Mic,
-    title: "Voice-based AI Interviewer",
-    description: "Natural voice conversations powered by advanced AI that adapts in real-time.",
+    title: "Голосовой ИИ-интервьюер",
+    description: "Естественные голосовые диалоги на базе продвинутого ИИ, адаптирующегося в реальном времени.",
   },
   {
     icon: Database,
-    title: "Knowledge Base Integration",
-    description: "Upload your own content. Our RAG system ensures relevant, accurate assessments.",
+    title: "Интеграция базы знаний",
+    description: "Загрузите свои материалы. Наша RAG-система обеспечит релевантные и точные оценки.",
   },
   {
     icon: FileText,
-    title: "Real-time Transcription",
-    description: "Every word captured and analyzed with speaker-level precision.",
+    title: "Транскрипция в реальном времени",
+    description: "Каждое слово фиксируется и анализируется с точностью до говорящего.",
   },
   {
     icon: Brain,
-    title: "Adaptive Assessment",
-    description: "Questions dynamically adjust based on responses for deeper evaluation.",
+    title: "Адаптивная оценка",
+    description: "Вопросы динамически подстраиваются под ответы для более глубокой оценки.",
   },
   {
     icon: BarChart3,
-    title: "Detailed Reports",
-    description: "Comprehensive analytics with topic breakdowns and actionable recommendations.",
+    title: "Подробные отчёты",
+    description: "Комплексная аналитика с разбивкой по темам и практическими рекомендациями.",
   },
   {
     icon: Award,
-    title: "Certificates",
-    description: "Earn verifiable certificates upon successful course completion.",
+    title: "Сертификаты",
+    description: "Получайте верифицируемые сертификаты по завершении курсов.",
   },
 ];
 
@@ -52,11 +52,11 @@ const FeaturesSection = () => {
           className="text-center mb-16"
         >
           <h2 className="text-3xl sm:text-4xl font-heading font-bold mb-4">
-            Everything you need for{" "}
-            <span className="gradient-text">smarter assessments</span>
+            Всё для{" "}
+            <span className="gradient-text">умной оценки</span>
           </h2>
           <p className="text-muted-foreground max-w-xl mx-auto">
-            A complete platform for voice-based AI interviews and training, built for scale.
+            Полноценная платформа для голосовых ИИ-интервью и обучения, созданная для масштабирования.
           </p>
         </motion.div>
 

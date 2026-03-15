@@ -13,14 +13,14 @@ import {
 } from "lucide-react";
 
 const navItems = [
-  { icon: LayoutDashboard, label: "Dashboard", path: "/company" },
-  { icon: Database, label: "Knowledge Base", path: "/company/knowledge-base" },
-  { icon: Briefcase, label: "Vacancies", path: "/company/vacancies" },
-  { icon: Users, label: "Candidates", path: "/company/candidates" },
-  { icon: History, label: "Sessions", path: "/company/sessions" },
-  { icon: BarChart3, label: "Reports", path: "/company/reports" },
-  { icon: Coins, label: "Tokens", path: "/company/tokens" },
-  { icon: Settings, label: "Settings", path: "/company/settings" },
+  { icon: LayoutDashboard, label: "Панель управления", path: "/company" },
+  { icon: Database, label: "База знаний", path: "/company/knowledge-base" },
+  { icon: Briefcase, label: "Вакансии", path: "/company/vacancies" },
+  { icon: Users, label: "Кандидаты", path: "/company/candidates" },
+  { icon: History, label: "Сессии", path: "/company/sessions" },
+  { icon: BarChart3, label: "Отчёты", path: "/company/reports" },
+  { icon: Coins, label: "Токены", path: "/company/tokens" },
+  { icon: Settings, label: "Настройки", path: "/company/settings" },
 ];
 
 const CompanySidebar = () => {
@@ -33,7 +33,7 @@ const CompanySidebar = () => {
       </Link>
       <div className="flex items-center gap-2 px-3 mb-8">
         <Building2 className="w-3 h-3 text-muted-foreground" />
-        <span className="text-xs text-muted-foreground">Business</span>
+        <span className="text-xs text-muted-foreground">Бизнес</span>
       </div>
 
       <nav className="flex-1 space-y-1">
@@ -58,7 +58,7 @@ const CompanySidebar = () => {
 
       <button className="flex items-center gap-3 px-3 py-2.5 rounded-xl text-sm text-muted-foreground hover:text-destructive transition-colors">
         <LogOut className="w-4 h-4" />
-        Log out
+        Выйти
       </button>
     </aside>
   );

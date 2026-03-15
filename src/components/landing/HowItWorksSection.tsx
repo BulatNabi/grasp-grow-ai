@@ -5,20 +5,20 @@ const steps = [
   {
     icon: Upload,
     number: "01",
-    title: "Upload & Configure",
-    description: "Upload your knowledge base or select from our course catalog. Set your assessment criteria.",
+    title: "Загрузите и настройте",
+    description: "Загрузите базу знаний или выберите из каталога курсов. Задайте критерии оценки.",
   },
   {
     icon: Mic,
     number: "02",
-    title: "AI Conducts Interview",
-    description: "Our AI interviewer engages in natural voice conversation, adapting questions dynamically.",
+    title: "ИИ проводит интервью",
+    description: "Наш ИИ-интервьюер ведёт естественный голосовой диалог, динамически адаптируя вопросы.",
   },
   {
     icon: FileBarChart,
     number: "03",
-    title: "Get Detailed Report",
-    description: "Receive comprehensive analysis with scores, recommendations, and actionable insights.",
+    title: "Получите подробный отчёт",
+    description: "Получите комплексный анализ с оценками, рекомендациями и полезными выводами.",
   },
 ];
 
@@ -34,10 +34,10 @@ const HowItWorksSection = () => {
           className="text-center mb-16"
         >
           <h2 className="text-3xl sm:text-4xl font-heading font-bold mb-4">
-            How it <span className="gradient-text">works</span>
+            Как это <span className="gradient-text">работает</span>
           </h2>
           <p className="text-muted-foreground max-w-lg mx-auto">
-            Three simple steps to transform your assessment process.
+            Три простых шага для трансформации процесса оценки.
           </p>
         </motion.div>
 

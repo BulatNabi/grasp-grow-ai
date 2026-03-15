@@ -18,8 +18,8 @@ const Register = () => {
       <div className="flex items-center justify-center min-h-screen px-4 pt-16">
         <div className="glass-card p-8 w-full max-w-lg">
           <div className="text-center mb-8">
-            <h1 className="text-2xl font-heading font-bold mb-2">Create your account</h1>
-            <p className="text-sm text-muted-foreground">Choose how you'd like to use mocki</p>
+            <h1 className="text-2xl font-heading font-bold mb-2">Создайте аккаунт</h1>
+            <p className="text-sm text-muted-foreground">Выберите, как вы хотите использовать mocki</p>
           </div>
 
           {!userType ? (
@@ -29,16 +29,16 @@ const Register = () => {
                 className="glass-card-hover p-6 text-center"
               >
                 <User className="w-8 h-8 text-accent mx-auto mb-3" />
-                <h3 className="font-semibold mb-1">Individual</h3>
-                <p className="text-xs text-muted-foreground">Learn & get certified</p>
+                <h3 className="font-semibold mb-1">Частное лицо</h3>
+                <p className="text-xs text-muted-foreground">Учитесь и получайте сертификаты</p>
               </button>
               <button
                 onClick={() => setUserType("company")}
                 className="glass-card-hover p-6 text-center"
               >
                 <Building2 className="w-8 h-8 text-accent mx-auto mb-3" />
-                <h3 className="font-semibold mb-1">Company</h3>
-                <p className="text-xs text-muted-foreground">Hire & train teams</p>
+                <h3 className="font-semibold mb-1">Компания</h3>
+                <p className="text-xs text-muted-foreground">Нанимайте и обучайте команды</p>
               </button>
             </div>
           ) : (
@@ -48,19 +48,19 @@ const Register = () => {
                   onClick={() => setUserType(null)}
                   className="text-xs text-accent hover:underline"
                 >
-                  ← Change type
+                  ← Изменить тип
                 </button>
-                <span className="text-xs text-muted-foreground capitalize">
-                  {userType} account
+                <span className="text-xs text-muted-foreground">
+                  {userType === "individual" ? "Личный аккаунт" : "Корпоративный аккаунт"}
                 </span>
               </div>
 
               {userType === "company" && (
                 <div className="space-y-2">
-                  <Label htmlFor="company">Company Name</Label>
+                  <Label htmlFor="company">Название компании</Label>
                   <Input
                     id="company"
-                    placeholder="Acme Inc."
+                    placeholder="ООО «Пример»"
                     className="bg-secondary/50 border-border/40 focus:border-primary rounded-xl"
                   />
                 </div>
@@ -68,18 +68,18 @@ const Register = () => {
 
               <div className="grid grid-cols-2 gap-4">
                 <div className="space-y-2">
-                  <Label htmlFor="first">First Name</Label>
+                  <Label htmlFor="first">Имя</Label>
                   <Input
                     id="first"
-                    placeholder="John"
+                    placeholder="Иван"
                     className="bg-secondary/50 border-border/40 focus:border-primary rounded-xl"
                   />
                 </div>
                 <div className="space-y-2">
-                  <Label htmlFor="last">Last Name</Label>
+                  <Label htmlFor="last">Фамилия</Label>
                   <Input
                     id="last"
-                    placeholder="Doe"
+                    placeholder="Иванов"
                     className="bg-secondary/50 border-border/40 focus:border-primary rounded-xl"
                   />
                 </div>
@@ -96,7 +96,7 @@ const Register = () => {
               </div>
 
               <div className="space-y-2">
-                <Label htmlFor="password">Password</Label>
+                <Label htmlFor="password">Пароль</Label>
                 <Input
                   id="password"
                   type="password"
@@ -106,15 +106,15 @@ const Register = () => {
               </div>
 
               <Button variant="gradient" className="w-full rounded-xl" type="submit">
-                Create Account
+                Создать аккаунт
               </Button>
             </form>
           )}
 
           <p className="text-center text-sm text-muted-foreground mt-6">
-            Already have an account?{" "}
+            Уже есть аккаунт?{" "}
             <Link to="/login" className="text-accent hover:underline">
-              Sign in
+              Войти
             </Link>
           </p>
         </div>

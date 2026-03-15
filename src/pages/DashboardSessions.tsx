@@ -4,12 +4,12 @@ import { Button } from "@/components/ui/button";
 import { Clock, FileText } from "lucide-react";
 
 const sessions = [
-  { title: "React Fundamentals", date: "Feb 8, 2026", duration: "25 min", score: 92, status: "completed" },
-  { title: "System Design Basics", date: "Feb 5, 2026", duration: "32 min", score: 78, status: "completed" },
-  { title: "TypeScript Advanced", date: "Feb 2, 2026", duration: "28 min", score: 88, status: "completed" },
-  { title: "Node.js Patterns", date: "Jan 28, 2026", duration: "20 min", score: 95, status: "completed" },
-  { title: "CSS Architecture", date: "Jan 25, 2026", duration: "18 min", score: 72, status: "completed" },
-  { title: "REST API Design", date: "Jan 20, 2026", duration: "30 min", score: 85, status: "completed" },
+  { title: "React Fundamentals", date: "8 фев 2026", duration: "25 мин", score: 92, status: "завершено" },
+  { title: "System Design Basics", date: "5 фев 2026", duration: "32 мин", score: 78, status: "завершено" },
+  { title: "TypeScript Advanced", date: "2 фев 2026", duration: "28 мин", score: 88, status: "завершено" },
+  { title: "Node.js Patterns", date: "28 янв 2026", duration: "20 мин", score: 95, status: "завершено" },
+  { title: "CSS Architecture", date: "25 янв 2026", duration: "18 мин", score: 72, status: "завершено" },
+  { title: "REST API Design", date: "20 янв 2026", duration: "30 мин", score: 85, status: "завершено" },
 ];
 
 const DashboardSessions = () => {
@@ -18,8 +18,8 @@ const DashboardSessions = () => {
       <DashboardSidebar />
       <main className="flex-1 p-6 lg:p-8">
         <div className="max-w-5xl">
-          <h1 className="text-2xl font-heading font-bold mb-1">Sessions</h1>
-          <p className="text-sm text-muted-foreground mb-8">Review your past interview sessions</p>
+          <h1 className="text-2xl font-heading font-bold mb-1">Сессии</h1>
+          <p className="text-sm text-muted-foreground mb-8">История ваших интервью-сессий</p>
 
           <div className="space-y-3">
             {sessions.map((session, i) => (

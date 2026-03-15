@@ -2,16 +2,16 @@ import DashboardSidebar from "@/components/DashboardSidebar";
 import { BarChart3, Award, Zap, BookOpen } from "lucide-react";
 
 const stats = [
-  { icon: BookOpen, label: "Completed Sessions", value: "12", color: "text-accent" },
-  { icon: BarChart3, label: "Average Score", value: "87%", color: "text-success" },
-  { icon: Award, label: "Certificates", value: "3", color: "text-warning" },
-  { icon: Zap, label: "Tokens Left", value: "142", color: "text-accent" },
+  { icon: BookOpen, label: "Завершённые сессии", value: "12", color: "text-accent" },
+  { icon: BarChart3, label: "Средний балл", value: "87%", color: "text-success" },
+  { icon: Award, label: "Сертификаты", value: "3", color: "text-warning" },
+  { icon: Zap, label: "Осталось токенов", value: "142", color: "text-accent" },
 ];
 
 const recentSessions = [
-  { title: "React Fundamentals", score: 92, date: "Feb 8, 2026" },
-  { title: "System Design Basics", score: 78, date: "Feb 5, 2026" },
-  { title: "TypeScript Advanced", score: 88, date: "Feb 2, 2026" },
+  { title: "React Fundamentals", score: 92, date: "8 фев 2026" },
+  { title: "System Design Basics", score: 78, date: "5 фев 2026" },
+  { title: "TypeScript Advanced", score: 88, date: "2 фев 2026" },
 ];
 
 const Dashboard = () => {
@@ -20,8 +20,8 @@ const Dashboard = () => {
       <DashboardSidebar />
       <main className="flex-1 p-6 lg:p-8">
         <div className="max-w-5xl">
-          <h1 className="text-2xl font-heading font-bold mb-1">Welcome back, Alex</h1>
-          <p className="text-sm text-muted-foreground mb-8">Here's your learning progress</p>
+          <h1 className="text-2xl font-heading font-bold mb-1">С возвращением, Алекс</h1>
+          <p className="text-sm text-muted-foreground mb-8">Ваш прогресс обучения</p>
 
           {/* Stats */}
           <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-4 mb-8">
@@ -37,7 +37,7 @@ const Dashboard = () => {
           </div>
 
           {/* Recent Sessions */}
-          <h2 className="text-lg font-semibold mb-4">Recent Sessions</h2>
+          <h2 className="text-lg font-semibold mb-4">Последние сессии</h2>
           <div className="space-y-3">
             {recentSessions.map((session) => (
               <div
