@@ -10,12 +10,12 @@ import {
 } from "lucide-react";
 
 const navItems = [
-  { icon: LayoutDashboard, label: "Dashboard", path: "/dashboard" },
-  { icon: BookOpen, label: "My Courses", path: "/dashboard/courses" },
-  { icon: History, label: "Sessions", path: "/dashboard/sessions" },
-  { icon: Award, label: "Certificates", path: "/dashboard/certificates" },
-  { icon: Coins, label: "Tokens", path: "/dashboard/tokens" },
-  { icon: Settings, label: "Settings", path: "/dashboard/settings" },
+  { icon: LayoutDashboard, label: "Панель управления", path: "/dashboard" },
+  { icon: BookOpen, label: "Мои курсы", path: "/dashboard/courses" },
+  { icon: History, label: "Сессии", path: "/dashboard/sessions" },
+  { icon: Award, label: "Сертификаты", path: "/dashboard/certificates" },
+  { icon: Coins, label: "Токены", path: "/dashboard/tokens" },
+  { icon: Settings, label: "Настройки", path: "/dashboard/settings" },
 ];
 
 const DashboardSidebar = () => {
@@ -49,7 +49,7 @@ const DashboardSidebar = () => {
 
       <button className="flex items-center gap-3 px-3 py-2.5 rounded-xl text-sm text-muted-foreground hover:text-destructive transition-colors">
         <LogOut className="w-4 h-4" />
-        Log out
+        Выйти
       </button>
     </aside>
   );

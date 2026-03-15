@@ -5,43 +5,43 @@ import { Link } from "react-router-dom";
 
 const plans = [
   {
-    name: "Starter",
+    name: "Стартовый",
     price: "$29",
-    tokens: "50 sessions",
-    description: "Perfect for individuals getting started",
+    tokens: "50 сессий",
+    description: "Идеально для начала работы",
     features: [
-      "Voice AI interviews",
-      "Course catalog access",
-      "Basic reports",
-      "Email support",
+      "Голосовые ИИ-интервью",
+      "Доступ к каталогу курсов",
+      "Базовые отчёты",
+      "Поддержка по email",
     ],
     featured: false,
   },
   {
-    name: "Professional",
+    name: "Профессиональный",
     price: "$99",
-    tokens: "200 sessions",
-    description: "For growing teams and recruiters",
+    tokens: "200 сессий",
+    description: "Для растущих команд и рекрутеров",
     features: [
-      "Everything in Starter",
-      "Custom knowledge base",
-      "Advanced analytics",
-      "Candidate management",
-      "Priority support",
+      "Всё из Стартового",
+      "Своя база знаний",
+      "Продвинутая аналитика",
+      "Управление кандидатами",
+      "Приоритетная поддержка",
     ],
     featured: true,
   },
   {
-    name: "Enterprise",
-    price: "Custom",
-    tokens: "Unlimited",
-    description: "For large organizations",
+    name: "Корпоративный",
+    price: "По запросу",
+    tokens: "Безлимит",
+    description: "Для крупных организаций",
     features: [
-      "Everything in Professional",
-      "Dedicated account manager",
-      "Custom integrations",
-      "SLA guarantee",
-      "SSO & compliance",
+      "Всё из Профессионального",
+      "Персональный менеджер",
+      "Кастомные интеграции",
+      "Гарантия SLA",
+      "SSO и комплаенс",
     ],
     featured: false,
   },
@@ -58,10 +58,10 @@ const PricingSection = () => {
           className="text-center mb-16"
         >
           <h2 className="text-3xl sm:text-4xl font-heading font-bold mb-4">
-            Simple, <span className="gradient-text">token-based</span> pricing
+            Простое <span className="gradient-text">токен-ценообразование</span>
           </h2>
           <p className="text-muted-foreground max-w-lg mx-auto">
-            Pay only for what you use. Scale up as you grow.
+            Платите только за то, что используете. Масштабируйтесь по мере роста.
           </p>
         </motion.div>
 
@@ -81,15 +81,15 @@ const PricingSection = () => {
             >
               {plan.featured && (
                 <div className="absolute -top-3 left-1/2 -translate-x-1/2 px-3 py-1 rounded-full bg-gradient-to-r from-primary to-accent text-xs font-medium text-primary-foreground">
-                  Most Popular
+                  Популярный
                 </div>
               )}
               <h3 className="text-lg font-semibold mb-1">{plan.name}</h3>
               <p className="text-sm text-muted-foreground mb-4">{plan.description}</p>
               <div className="mb-1">
                 <span className="text-4xl font-heading font-bold">{plan.price}</span>
-                {plan.price !== "Custom" && (
-                  <span className="text-muted-foreground text-sm">/month</span>
+                {plan.price !== "По запросу" && (
+                  <span className="text-muted-foreground text-sm">/мес</span>
                 )}
               </div>
               <p className="text-sm text-accent stat-mono mb-6">{plan.tokens}</p>
@@ -106,7 +106,7 @@ const PricingSection = () => {
                 className="w-full rounded-xl"
                 asChild
               >
-                <Link to="/register">Get Started</Link>
+                <Link to="/register">Начать</Link>
               </Button>
             </motion.div>
           ))}

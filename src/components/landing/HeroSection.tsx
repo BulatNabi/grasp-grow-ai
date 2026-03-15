@@ -7,7 +7,6 @@ import { Link } from "react-router-dom";
 const HeroSection = () => {
   return (
     <section className="relative min-h-screen flex items-center justify-center overflow-hidden px-4">
-      {/* Background orbs */}
       <div className="floating-orb w-96 h-96 -top-48 -left-48" />
       <div className="floating-orb w-[500px] h-[500px] -bottom-64 -right-64 opacity-10" />
       <div className="floating-orb w-64 h-64 top-1/3 right-1/4 opacity-[0.08] animate-float" />
@@ -21,7 +20,7 @@ const HeroSection = () => {
         >
           <span className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full border border-primary/30 bg-primary/10 text-sm text-accent">
             <span className="w-2 h-2 rounded-full bg-accent animate-pulse" />
-            AI-Powered Voice Platform
+            Голосовая ИИ-платформа
           </span>
         </motion.div>
 
@@ -31,9 +30,8 @@ const HeroSection = () => {
           transition={{ duration: 0.6, delay: 0.1 }}
           className="text-5xl sm:text-6xl lg:text-7xl font-heading font-800 leading-tight mb-6"
         >
-          AI-Powered{" "}
-          <span className="gradient-text">Interviews</span>
-          <br />& Training
+          ИИ-<span className="gradient-text">интервью</span>
+          <br />и обучение
         </motion.h1>
 
         <motion.p
@@ -42,8 +40,8 @@ const HeroSection = () => {
           transition={{ duration: 0.6, delay: 0.2 }}
           className="text-lg sm:text-xl text-muted-foreground max-w-2xl mx-auto mb-10"
         >
-          Conduct voice-based AI interviews and training sessions that adapt to
-          each candidate. Get detailed reports, certifications, and actionable insights.
+          Проводите голосовые ИИ-интервью и обучающие сессии, которые адаптируются
+          под каждого кандидата. Получайте подробные отчёты, сертификаты и полезные рекомендации.
         </motion.p>
 
         <motion.div
@@ -54,11 +52,11 @@ const HeroSection = () => {
         >
           <Button variant="gradient" size="lg" className="text-base px-8 py-6 rounded-xl" asChild>
             <Link to="/register">
-              For Companies <ArrowRight className="ml-1 h-4 w-4" />
+              Для компаний <ArrowRight className="ml-1 h-4 w-4" />
             </Link>
           </Button>
           <Button variant="hero-outline" size="lg" className="text-base px-8 py-6 rounded-xl" asChild>
-            <Link to="/register">For Individuals</Link>
+            <Link to="/register">Для частных лиц</Link>
           </Button>
         </motion.div>
 
@@ -68,10 +66,10 @@ const HeroSection = () => {
           transition={{ duration: 0.8, delay: 0.5 }}
           className="glass-card p-8 max-w-md mx-auto"
         >
-          <p className="text-sm text-muted-foreground mb-4">Live AI Interview Preview</p>
+          <p className="text-sm text-muted-foreground mb-4">Предпросмотр ИИ-интервью</p>
           <VoiceWaveform />
           <p className="text-xs text-muted-foreground mt-4 stat-mono">
-            Analyzing response patterns...
+            Анализ паттернов ответов...
           </p>
         </motion.div>
       </div>

@@ -3,18 +3,18 @@ import { Users, Zap, BarChart3, Database, Plus, Upload, UserPlus } from "lucide-
 import { Button } from "@/components/ui/button";
 
 const stats = [
-  { icon: Users, label: "Total Candidates", value: "48", color: "text-accent" },
-  { icon: Zap, label: "Active Sessions", value: "5", color: "text-success" },
-  { icon: BarChart3, label: "Avg Score", value: "82%", color: "text-warning" },
-  { icon: Database, label: "Knowledge Base", value: "24 docs", color: "text-accent" },
+  { icon: Users, label: "Всего кандидатов", value: "48", color: "text-accent" },
+  { icon: Zap, label: "Активные сессии", value: "5", color: "text-success" },
+  { icon: BarChart3, label: "Средний балл", value: "82%", color: "text-warning" },
+  { icon: Database, label: "База знаний", value: "24 док.", color: "text-accent" },
 ];
 
 const recentActivity = [
-  { text: "John Doe completed Senior React Developer interview", time: "2 hours ago", type: "session" },
-  { text: "New candidate invited: jane.smith@company.com", time: "4 hours ago", type: "invite" },
-  { text: "Knowledge base updated: API Design Guidelines.pdf", time: "Yesterday", type: "upload" },
-  { text: "Maria Garcia scored 94% on Backend Engineer assessment", time: "Yesterday", type: "session" },
-  { text: "New vacancy created: Full Stack Developer", time: "2 days ago", type: "vacancy" },
+  { text: "Иван Петров завершил интервью на позицию Senior React Developer", time: "2 часа назад", type: "session" },
+  { text: "Приглашён новый кандидат: jane.smith@company.com", time: "4 часа назад", type: "invite" },
+  { text: "База знаний обновлена: API Design Guidelines.pdf", time: "Вчера", type: "upload" },
+  { text: "Мария Гарсия набрала 94% на оценке Backend Engineer", time: "Вчера", type: "session" },
+  { text: "Создана новая вакансия: Full Stack Developer", time: "2 дня назад", type: "vacancy" },
 ];
 
 const CompanyDashboard = () => {
@@ -25,19 +25,17 @@ const CompanyDashboard = () => {
         <div className="max-w-5xl">
           <div className="flex items-center justify-between mb-8">
             <div>
-              <h1 className="text-2xl font-heading font-bold mb-1">Company Dashboard</h1>
-              <p className="text-sm text-muted-foreground">Overview of your hiring pipeline</p>
+              <h1 className="text-2xl font-heading font-bold mb-1">Панель компании</h1>
+              <p className="text-sm text-muted-foreground">Обзор процесса найма</p>
             </div>
           </div>
 
-          {/* Quick Actions */}
           <div className="flex flex-wrap gap-3 mb-8">
-            <Button variant="gradient" size="sm"><Plus className="w-3 h-3 mr-1" />Create Vacancy</Button>
-            <Button variant="hero-outline" size="sm"><UserPlus className="w-3 h-3 mr-1" />Invite Candidate</Button>
-            <Button variant="hero-outline" size="sm"><Upload className="w-3 h-3 mr-1" />Upload Documents</Button>
+            <Button variant="gradient" size="sm"><Plus className="w-3 h-3 mr-1" />Создать вакансию</Button>
+            <Button variant="hero-outline" size="sm"><UserPlus className="w-3 h-3 mr-1" />Пригласить кандидата</Button>
+            <Button variant="hero-outline" size="sm"><Upload className="w-3 h-3 mr-1" />Загрузить документы</Button>
           </div>
 
-          {/* Stats */}
           <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-4 mb-8">
             {stats.map((stat) => (
               <div key={stat.label} className="glass-card p-5">
@@ -50,8 +48,7 @@ const CompanyDashboard = () => {
             ))}
           </div>
 
-          {/* Recent Activity */}
-          <h2 className="text-lg font-semibold mb-4">Recent Activity</h2>
+          <h2 className="text-lg font-semibold mb-4">Последняя активность</h2>
           <div className="space-y-3">
             {recentActivity.map((item, i) => (
               <div key={i} className="glass-card p-4 flex items-center justify-between">

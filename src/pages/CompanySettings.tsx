@@ -13,14 +13,14 @@ const CompanySettings = () => {
       <CompanySidebar />
       <main className="flex-1 p-6 lg:p-8">
         <div className="max-w-3xl">
-          <h1 className="text-2xl font-heading font-bold mb-1">Settings</h1>
-          <p className="text-sm text-muted-foreground mb-8">Manage your company account</p>
+          <h1 className="text-2xl font-heading font-bold mb-1">Настройки</h1>
+          <p className="text-sm text-muted-foreground mb-8">Управляйте аккаунтом компании</p>
 
           <Tabs defaultValue="company">
             <TabsList className="mb-6 bg-secondary/50">
-              <TabsTrigger value="company">Company</TabsTrigger>
-              <TabsTrigger value="notifications">Notifications</TabsTrigger>
-              <TabsTrigger value="security">Security</TabsTrigger>
+              <TabsTrigger value="company">Компания</TabsTrigger>
+              <TabsTrigger value="notifications">Уведомления</TabsTrigger>
+              <TabsTrigger value="security">Безопасность</TabsTrigger>
             </TabsList>
 
             <TabsContent value="company">
@@ -29,41 +29,41 @@ const CompanySettings = () => {
                   <Avatar className="w-16 h-16">
                     <AvatarFallback className="bg-primary/10 text-accent text-xl font-bold">AC</AvatarFallback>
                   </Avatar>
-                  <Button variant="hero-outline" size="sm">Change Logo</Button>
+                  <Button variant="hero-outline" size="sm">Изменить логотип</Button>
                 </div>
                 <div className="space-y-2">
-                  <Label>Company Name</Label>
+                  <Label>Название компании</Label>
                   <Input defaultValue="Acme Corp" className="bg-secondary/50 border-border/30" />
                 </div>
                 <div className="space-y-2">
-                  <Label>Industry</Label>
-                  <Input defaultValue="Technology" className="bg-secondary/50 border-border/30" />
+                  <Label>Отрасль</Label>
+                  <Input defaultValue="Технологии" className="bg-secondary/50 border-border/30" />
                 </div>
                 <div className="space-y-2">
-                  <Label>Description</Label>
-                  <Textarea defaultValue="Leading technology company specializing in cloud solutions." className="bg-secondary/50 border-border/30" />
+                  <Label>Описание</Label>
+                  <Textarea defaultValue="Ведущая технологическая компания, специализирующаяся на облачных решениях." className="bg-secondary/50 border-border/30" />
                 </div>
                 <div className="grid sm:grid-cols-2 gap-4">
                   <div className="space-y-2">
-                    <Label>Admin Email</Label>
+                    <Label>Email администратора</Label>
                     <Input defaultValue="admin@acmecorp.com" className="bg-secondary/50 border-border/30" />
                   </div>
                   <div className="space-y-2">
-                    <Label>Website</Label>
+                    <Label>Сайт</Label>
                     <Input defaultValue="https://acmecorp.com" className="bg-secondary/50 border-border/30" />
                   </div>
                 </div>
-                <Button variant="gradient">Save Changes</Button>
+                <Button variant="gradient">Сохранить</Button>
               </div>
             </TabsContent>
 
             <TabsContent value="notifications">
               <div className="glass-card p-6 space-y-6">
                 {[
-                  { label: "Candidate completed session", desc: "Get notified when a candidate finishes an interview" },
-                  { label: "New candidate registered", desc: "When someone signs up via invite link" },
-                  { label: "Weekly summary report", desc: "Receive a weekly digest of all activity" },
-                  { label: "Token balance low", desc: "Alert when tokens drop below 50" },
+                  { label: "Кандидат завершил сессию", desc: "Уведомление, когда кандидат заканчивает интервью" },
+                  { label: "Новый кандидат зарегистрирован", desc: "Когда кто-то регистрируется по ссылке приглашения" },
+                  { label: "Еженедельный отчёт", desc: "Получайте еженедельную сводку всей активности" },
+                  { label: "Низкий баланс токенов", desc: "Оповещение, когда токенов меньше 50" },
                 ].map((item) => (
                   <div key={item.label} className="flex items-center justify-between">
                     <div>
@@ -79,18 +79,18 @@ const CompanySettings = () => {
             <TabsContent value="security">
               <div className="glass-card p-6 space-y-6">
                 <div className="space-y-2">
-                  <Label>Current Password</Label>
+                  <Label>Текущий пароль</Label>
                   <Input type="password" className="bg-secondary/50 border-border/30" />
                 </div>
                 <div className="space-y-2">
-                  <Label>New Password</Label>
+                  <Label>Новый пароль</Label>
                   <Input type="password" className="bg-secondary/50 border-border/30" />
                 </div>
                 <div className="space-y-2">
-                  <Label>Confirm New Password</Label>
+                  <Label>Подтвердите новый пароль</Label>
                   <Input type="password" className="bg-secondary/50 border-border/30" />
                 </div>
-                <Button variant="gradient">Update Password</Button>
+                <Button variant="gradient">Обновить пароль</Button>
               </div>
             </TabsContent>
           </Tabs>

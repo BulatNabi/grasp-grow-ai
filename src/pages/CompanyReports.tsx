@@ -2,9 +2,9 @@ import CompanySidebar from "@/components/CompanySidebar";
 import { BarChart3, TrendingUp, Users, Award } from "lucide-react";
 
 const topPerformers = [
-  { name: "Maria Garcia", vacancy: "Backend Engineer", score: 94 },
-  { name: "John Doe", vacancy: "Senior React Developer", score: 92 },
-  { name: "Sam Wilson", vacancy: "Senior React Developer", score: 85 },
+  { name: "Мария Гарсия", vacancy: "Backend Engineer", score: 94 },
+  { name: "Иван Петров", vacancy: "Senior React Developer", score: 92 },
+  { name: "Сергей Вилсон", vacancy: "Senior React Developer", score: 85 },
 ];
 
 const vacancyStats = [
@@ -20,16 +20,15 @@ const CompanyReports = () => {
       <CompanySidebar />
       <main className="flex-1 p-6 lg:p-8">
         <div className="max-w-5xl">
-          <h1 className="text-2xl font-heading font-bold mb-1">Reports</h1>
-          <p className="text-sm text-muted-foreground mb-8">Analytics and insights across your hiring pipeline</p>
+          <h1 className="text-2xl font-heading font-bold mb-1">Отчёты</h1>
+          <p className="text-sm text-muted-foreground mb-8">Аналитика и инсайты по процессу найма</p>
 
-          {/* Overview Stats */}
           <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-4 mb-8">
             {[
-              { icon: Users, label: "Total Interviews", value: "28", color: "text-accent" },
-              { icon: BarChart3, label: "Avg Score", value: "82%", color: "text-success" },
-              { icon: TrendingUp, label: "Hire Rate", value: "35%", color: "text-warning" },
-              { icon: Award, label: "Top Score", value: "94%", color: "text-accent" },
+              { icon: Users, label: "Всего интервью", value: "28", color: "text-accent" },
+              { icon: BarChart3, label: "Средний балл", value: "82%", color: "text-success" },
+              { icon: TrendingUp, label: "Процент найма", value: "35%", color: "text-warning" },
+              { icon: Award, label: "Лучший балл", value: "94%", color: "text-accent" },
             ].map((stat) => (
               <div key={stat.label} className="glass-card p-5">
                 <div className="flex items-center gap-3 mb-2">
@@ -42,9 +41,8 @@ const CompanyReports = () => {
           </div>
 
           <div className="grid lg:grid-cols-2 gap-6">
-            {/* Top Performers */}
             <div>
-              <h2 className="text-lg font-semibold mb-4">Top Performers</h2>
+              <h2 className="text-lg font-semibold mb-4">Лучшие кандидаты</h2>
               <div className="space-y-3">
                 {topPerformers.map((p, i) => (
                   <div key={i} className="glass-card p-4 flex items-center justify-between">
@@ -61,17 +59,16 @@ const CompanyReports = () => {
               </div>
             </div>
 
-            {/* Per Vacancy */}
             <div>
-              <h2 className="text-lg font-semibold mb-4">By Vacancy</h2>
+              <h2 className="text-lg font-semibold mb-4">По вакансиям</h2>
               <div className="space-y-3">
                 {vacancyStats.map((v) => (
                   <div key={v.title} className="glass-card p-4">
                     <h3 className="text-sm font-medium mb-2">{v.title}</h3>
                     <div className="flex gap-4 text-xs text-muted-foreground">
-                      <span>{v.candidates} candidates</span>
-                      <span>{v.completed} completed</span>
-                      <span className="stat-mono font-semibold text-foreground">Avg {v.avgScore}%</span>
+                      <span>{v.candidates} кандидатов</span>
+                      <span>{v.completed} завершено</span>
+                      <span className="stat-mono font-semibold text-foreground">Ср. {v.avgScore}%</span>
                     </div>
                   </div>
                 ))}

@@ -4,11 +4,11 @@ import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
 
 const documents = [
-  { name: "API Design Guidelines.pdf", type: "pdf", date: "Feb 8, 2026", status: "ready", size: "2.4 MB" },
-  { name: "React Best Practices.docx", type: "doc", date: "Feb 6, 2026", status: "ready", size: "1.1 MB" },
-  { name: "System Design Interview Questions.pdf", type: "pdf", date: "Feb 4, 2026", status: "processing", size: "3.8 MB" },
-  { name: "Company Culture Handbook.pdf", type: "pdf", date: "Feb 1, 2026", status: "ready", size: "5.2 MB" },
-  { name: "Technical Onboarding.mp4", type: "video", date: "Jan 28, 2026", status: "ready", size: "124 MB" },
+  { name: "API Design Guidelines.pdf", type: "pdf", date: "8 фев 2026", status: "ready", size: "2.4 МБ" },
+  { name: "React Best Practices.docx", type: "doc", date: "6 фев 2026", status: "ready", size: "1.1 МБ" },
+  { name: "System Design Interview Questions.pdf", type: "pdf", date: "4 фев 2026", status: "processing", size: "3.8 МБ" },
+  { name: "Company Culture Handbook.pdf", type: "pdf", date: "1 фев 2026", status: "ready", size: "5.2 МБ" },
+  { name: "Technical Onboarding.mp4", type: "video", date: "28 янв 2026", status: "ready", size: "124 МБ" },
 ];
 
 const CompanyKnowledgeBase = () => {
@@ -17,19 +17,17 @@ const CompanyKnowledgeBase = () => {
       <CompanySidebar />
       <main className="flex-1 p-6 lg:p-8">
         <div className="max-w-5xl">
-          <h1 className="text-2xl font-heading font-bold mb-1">Knowledge Base</h1>
-          <p className="text-sm text-muted-foreground mb-8">Upload documents to customize your AI interviewer</p>
+          <h1 className="text-2xl font-heading font-bold mb-1">База знаний</h1>
+          <p className="text-sm text-muted-foreground mb-8">Загружайте документы для настройки ИИ-интервьюера</p>
 
-          {/* Upload Area */}
           <div className="glass-card border-2 border-dashed border-primary/30 p-10 text-center mb-8 hover:border-primary/50 transition-colors cursor-pointer">
             <Upload className="w-10 h-10 text-accent mx-auto mb-3" />
-            <p className="font-medium mb-1">Drag & drop files here</p>
-            <p className="text-xs text-muted-foreground mb-4">PDF, DOCX, TXT, MP4 — Max 50MB</p>
-            <Button variant="gradient" size="sm">Browse Files</Button>
+            <p className="font-medium mb-1">Перетащите файлы сюда</p>
+            <p className="text-xs text-muted-foreground mb-4">PDF, DOCX, TXT, MP4 — Макс. 50 МБ</p>
+            <Button variant="gradient" size="sm">Выбрать файлы</Button>
           </div>
 
-          {/* Documents List */}
-          <h2 className="text-lg font-semibold mb-4">Uploaded Documents</h2>
+          <h2 className="text-lg font-semibold mb-4">Загруженные документы</h2>
           <div className="space-y-3">
             {documents.map((doc) => (
               <div key={doc.name} className="glass-card p-4 flex items-center gap-4">
@@ -56,9 +54,9 @@ const CompanyKnowledgeBase = () => {
                   }`}
                 >
                   {doc.status === "ready" ? (
-                    <><CheckCircle className="w-3 h-3 mr-1" />Ready</>
+                    <><CheckCircle className="w-3 h-3 mr-1" />Готово</>
                   ) : (
-                    <><Loader2 className="w-3 h-3 mr-1 animate-spin" />Processing</>
+                    <><Loader2 className="w-3 h-3 mr-1 animate-spin" />Обработка</>
                   )}
                 </Badge>
                 <Button variant="ghost" size="icon" className="text-muted-foreground hover:text-destructive shrink-0">

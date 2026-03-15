@@ -18,8 +18,8 @@ const Login = () => {
       <div className="flex items-center justify-center min-h-screen px-4 pt-16">
         <div className="glass-card p-8 w-full max-w-md">
           <div className="text-center mb-8">
-            <h1 className="text-2xl font-heading font-bold mb-2">Welcome back</h1>
-            <p className="text-sm text-muted-foreground">Sign in to your mocki account</p>
+            <h1 className="text-2xl font-heading font-bold mb-2">С возвращением</h1>
+            <p className="text-sm text-muted-foreground">Войдите в свой аккаунт mocki</p>
           </div>
 
           <form className="space-y-4" onSubmit={(e) => e.preventDefault()}>
@@ -33,7 +33,7 @@ const Login = () => {
               />
             </div>
             <div className="space-y-2">
-              <Label htmlFor="password">Password</Label>
+              <Label htmlFor="password">Пароль</Label>
               <div className="relative">
                 <Input
                   id="password"
@@ -53,19 +53,19 @@ const Login = () => {
 
             <div className="flex justify-end">
               <Link to="/" className="text-xs text-accent hover:underline">
-                Forgot password?
+                Забыли пароль?
               </Link>
             </div>
 
             <Button variant="gradient" className="w-full rounded-xl" type="submit">
-              Sign In
+              Войти
             </Button>
           </form>
 
           <p className="text-center text-sm text-muted-foreground mt-6">
-            Don't have an account?{" "}
+            Нет аккаунта?{" "}
             <Link to="/register" className="text-accent hover:underline">
-              Sign up
+              Зарегистрироваться
             </Link>
           </p>
         </div>
